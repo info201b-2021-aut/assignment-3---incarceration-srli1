@@ -1,0 +1,53 @@
+---
+title: "index.Rmd"
+author: "Sophie Li"
+date: "11/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Assignment 3: Data Visualization (Incarceration)
+### Introduction
+In recent years, more light has been shed on the longstanding racial disparities in the United States. Its manifestations and effects are visible not only in the healthcare system and in neighborhood conditions, but in prison systems as well. The dataset I am working with, containing incarceration data from Vera Institute, will give me an opportunity to analyze and visualize patterns in overall incarceration rates, and how these rates may be impacted by factors such as race.
+
+
+In addition to calculating the number of observations and features in the dataset to get a clearer picture of the data I am working with, I chose to first examine which state had the highest population of people ages 15 to 64 in the most recent year in the dataset. I felt that this value was relevant because it allows for better comparison to incarceration rates among a certain population; also, in the codebook, the authors mentioned that those under 15 and over 64 years old have relatively low rates of incarceration.
+
+
+In my summary information section, I also chose to calculate the state with the highest population of black individuals ages 15 to 64 in the most recent year, as I would be able to directly compare this to the previous value of the state with the highest overall population ages 15 to 64 and note possible discrepancies.
+
+
+I proceeded to examine the state with the highest ratio of black jail population to black population ages 15 to 64 in the most recent year to see whether a pattern emerged and whether it aligned with Vera's visual tool.
+
+
+For the next two functions, I decided to focus on county-level patterns, particularly extracting the counties with the highest black jail population and the highest white jail population by the most recent year. This allowed me to spot differences between the two outputs and demonstrate how these measures of incarceration may vary by race.
+
+
+After creating a new 'location' column to ensure the function only returned one unique county, I chose to look at how the white jail population and black jail population in King County, WA each changed over time from 1990 to 2018. This not only allowed me to focus on race-related changes in the incarceration data, but also visualize its potential impacts in my local community.
+
+
+Although the dataset contained many observations and features, concentrating on the values above gave me a better understanding of the complexity of the prison system and the need for more equitable changes in all domains, in order to advance towards social justice for all.
+
+
+### Trends Over Time Chart
+In my trends over time chart, I decided to depict the change in Washington state jail populations over time (from around 1970 to 2018) for different racial groups (AAPI, Black, Latinx, Native, and White). I thought that this would be an interesting measure of incarceration, as certain groups may be disproportionately impacted by the prison system. I also decided to focus on WA specifically so the chart would have more relevancy. This data visualization can be particularly valuable in illustrating differences in jail populations between racial groups, which may help inform changes to the prison/justice system in the future. 
+
+
+The patterns that emerged from this graph deviated slightly from my expectations. As the graph shows, the White jail population increased the most from 1970 to the most recent year in the dataset, followed by the Black jail population and the Latinx jail population, although these were both relatively stable in comparison to the White jail population. In addition, I noticed that the AAPI and Native jail populations remained fairly constant over time. However, it is important to keep in mind potential limitations of the dataset, as certain numbers may be under-reported or unrepresentative of the true population.
+
+
+### Variable Comparison Chart
+For my variable comparison chart, I decided to examine the total jail population vs. the black jail population in the most recent year in the dataset. I felt that visualizing these two continuous variables would give me a better understanding of how this measure of incarceration varies by race. I chose to use a line graph to depict my data, as it accentuates how the two variables are related to each other. 
+
+
+As the chart illustrates, an increase in the total jail population is associated with an increase in the black jail population as well. There appears to be a positive correlation between the two variables, suggesting that the proportion of black individuals in jail remained relatively consistent with the total number of individuals in jail over time.
+
+
+### Map
+For my map, I decided to illustrate the distribution of the white jail population across the United States. I felt that this was an interesting measure of incarceration that could be further emphasized through a data visualization map. I designed this map to show the number of white individuals in jail in each of the 50 states based on the data in the incarceration dataset. I specifically filtered my data down to the year 2018, the most recent year in the dataset, as it would be more relevant today. I also designed my map similarly to a heat map, in which high population values were represented with the color red, whereas low population values were represented with the color yellow.
+
+
+A pattern that clearly emerged from my map was that the state of Florida appeared to have the highest population of white individuals in jail. This is apparent from the red coloring of the state, which corresponds to a population of around 25,000, as shown by the legend. Other states with relatively high white jail populations include Tennessee, Georgia, and Pennsylvania, which are colored orange on the map. It is possible that there was a lack of data for particular states, as some remained blank/white.
